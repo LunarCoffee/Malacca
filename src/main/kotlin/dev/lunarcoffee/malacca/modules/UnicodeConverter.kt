@@ -4,7 +4,7 @@ import dev.lunarcoffee.malacca.splitSpaces
 import dev.lunarcoffee.malacca.toIntOrExit
 
 class UnicodeConverter : Module {
-    override fun decode(args: List<String>, input: String): String {
+    override fun decode(args: List<String>, input: String, raw: Boolean): String {
         return input
             .splitSpaces()
             .joinToString("") { Character.toChars(it.toIntOrExit()).joinToString("") }

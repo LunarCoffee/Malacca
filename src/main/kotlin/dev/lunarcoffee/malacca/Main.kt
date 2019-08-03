@@ -6,7 +6,7 @@ fun main(args: Array<String>) {
 
     val argParser = ArgumentParser(args)
     val module = argParser.getModule()
-    val (moduleArgs, input) = argParser.getModuleArgs()
+    val (moduleArgs, input, raw) = argParser.getModuleArgs()
 
-    println(module.decode(moduleArgs, input))
+    println(module.decode(moduleArgs, input, raw))
 }
